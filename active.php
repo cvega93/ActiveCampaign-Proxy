@@ -1,4 +1,7 @@
 <?php
+
+use App\ActiveCampaign;
+
 if (isset($_SERVER['HTTP_ORIGIN'])) {
     // Decide if the origin in $_SERVER['HTTP_ORIGIN'] is one
     // you want to allow, and if so:
@@ -20,13 +23,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 header("Access-Control-Allow-Origin: *");
 header('Content-Type: application/json');
 
-//require_once 'vendor/autoload.php';
+$_REQUEST = json_decode(file_get_contents('php://input'), true);
 
-echo 'No hay nada para ver aquí';
+require_once 'vendor/autoload.php';
 
-//if (isset($_REQUEST['method'])) {
-//    $activeCampaign = new ActiveCampaign();
-//    call_user_func_array([$activeCampaign, $_GET['method']], [$_REQUEST]);
-//} else {
-//    die('Especificar un método');
-//}
+if (isset($_GET['method'])) {
+    $activeCampaign = new ActiveCampaign();
+    call_user_func_array([$activeCampaign, $_GET['method']], [$_REQUEST]);
+} else {
+    die('Especificar un método');
+}
