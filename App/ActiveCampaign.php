@@ -23,7 +23,7 @@ class ActiveCampaign {
         ];
 
         if (isset($request['extraData'])) {
-            foreach ($request['extraData'] as $key=>$value) {
+            foreach ($request['extraData'] as $key => $value) {
                 $data[$key] = $value;
             }
         }
@@ -31,6 +31,25 @@ class ActiveCampaign {
         $this->activeCampaign->exec('contact_sync', $data);
     }
 
+    public function addTag($request)
+    {
+        if (!isset($request['email'])) die('Email requerido');
+        $data = [
+            'email' => $request['email'],
+            'tags' => $request['tags']
+        ];
+        $this->activeCampaign->exec('contact_tag_add', $data);
+    }
+
+    public function addEvent($request)
+    {
+        if (!isset($request['email'])) die('Email requerido');
+        $data = [
+            'email' => $request['email'],
+            'tags' => $request['tags']
+        ];
+        $this->activeCampaign->exec('contact_tag_add', $data);
+    }
     public function updateClient($request)
     {
         if (!isset($request['email'])) die('Email requerido');
@@ -40,11 +59,23 @@ class ActiveCampaign {
         ];
 
         if (isset($request['extraData'])) {
-            foreach ($request['extraData'] as $key=>$value) {
+            foreach ($request['extraData'] as $key => $value) {
                 $data[$key] = $value;
             }
         }
 
+        var_dump($data);
+
         $this->activeCampaign->exec('contact_sync', $data);
+    }
+
+    public function createCustomer()
+    {
+
+    }
+
+    public function generateOrder()
+    {
+
     }
 }

@@ -25,6 +25,12 @@ class Connection
         ]);
     }
 
+
+    public function execEvent()
+    {
+
+    }
+
     public function exec($method, $data, $debug = false)
     {
         $data['api_action'] = $method;
