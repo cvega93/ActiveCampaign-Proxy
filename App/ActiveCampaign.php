@@ -46,9 +46,9 @@ class ActiveCampaign {
         if (!isset($request['email'])) die('Email requerido');
         $data = [
             'email' => $request['email'],
-            'tags' => $request['tags']
+            'event_value' => $request['event_value']
         ];
-        $this->activeCampaign->exec('contact_tag_add', $data);
+        $this->activeCampaign->execEvent($request['event'], $data, true);
     }
     public function updateClient($request)
     {

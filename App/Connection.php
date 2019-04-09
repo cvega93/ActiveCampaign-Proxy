@@ -23,11 +23,45 @@ class Connection
                 'exceptions' => false
             ]
         ]);
+
     }
 
 
-    public function execEvent()
+    public function execEvent($event, $data, $debug = false)
     {
+        $request = new Client([
+            'base_uri' => 'https://trackcmp.net',
+        ]);
+
+        $data = [
+            "actid" => "223729883",
+            "key" => "6f9de46b2121c8dbfedad8799571c93a12c6cf47",
+            "event" => $event,
+            "eventdata" => $data['event_value'],
+            "visit" => [
+                "email" => $data['email'],
+            ]
+        ];
+
+        try {
+            $response = $request->request('POST', '/event', [
+                'debug' => $debug,
+                'form_params' => $data
+            ]);
+
+            if ($response->getStatusCode() == 200) {
+                header('Content-type: application/json');
+                echo $response->getBody()->getContents();
+            } else {
+                echo $response->getStatusCode();
+                echo $response->getBody()->getContents();
+                echo 'no pasa nada';
+            }
+
+        } catch (GuzzleException $e) {
+            echo '</br>---------- error ---------</br>';
+            die($e->getMessage());
+        }
 
     }
 

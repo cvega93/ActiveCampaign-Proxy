@@ -20,25 +20,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/ActiveCampaign.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="50" column="62" lean-forward="true" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
-              <folding>
-                <element signature="e#852#1295#0#PHP" />
-                <element signature="e#1301#1346#0#PHP" />
-                <element signature="e#1352#1396#0#PHP" />
-              </folding>
+            <state relative-caret-position="1">
+              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Connection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+            <state relative-caret-position="256">
+              <caret line="46" column="60" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
               <folding>
                 <element signature="e#22#44#0#PHP" expanded="true" />
               </folding>
@@ -79,10 +74,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1920" />
-    <option name="y" value="178" />
-    <option name="width" value="1600" />
-    <option name="height" value="902" />
+    <option name="x" value="1864" />
+    <option name="y" value="386" />
+    <option name="width" value="1590" />
+    <option name="height" value="675" />
   </component>
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
@@ -192,12 +187,14 @@
       <workItem from="1553033256285" duration="2967000" />
       <workItem from="1553049901038" duration="1200000" />
       <workItem from="1553181731085" duration="92000" />
-      <workItem from="1554755581427" duration="2945000" />
+      <workItem from="1554755581427" duration="4869000" />
+      <workItem from="1554770595888" duration="408000" />
+      <workItem from="1554772737567" duration="2268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65512000" />
+    <option name="totallyTimeSpent" value="70112000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -212,8 +209,8 @@
     <frame x="1920" y="178" width="1600" height="902" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49784017" visible="true" weight="0.14543115" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980595" visible="true" weight="0.14929216" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5019405" side_tool="true" visible="true" weight="0.14929216" />
       <window_info id="Favorites" order="2" sideWeight="0.50215983" side_tool="true" weight="0.192031" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
@@ -225,7 +222,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.22897801" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.2283871" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -262,24 +259,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Connection.php">
+    <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Client.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding>
-            <element signature="e#22#44#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="248">
+          <caret line="127" column="20" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/ActiveCampaign.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="50" column="62" lean-forward="true" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
+        <state relative-caret-position="1">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="46" column="60" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
           <folding>
-            <element signature="e#852#1295#0#PHP" />
-            <element signature="e#1301#1346#0#PHP" />
-            <element signature="e#1352#1396#0#PHP" />
+            <element signature="e#22#44#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
