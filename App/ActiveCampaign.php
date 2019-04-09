@@ -48,7 +48,7 @@ class ActiveCampaign {
             'email' => $request['email'],
             'event_value' => $request['event_value']
         ];
-        $this->activeCampaign->execEvent($request['event'], $data, true);
+        $this->activeCampaign->execEvent($request['event'], $data);
     }
     public function updateClient($request)
     {
