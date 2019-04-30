@@ -43,6 +43,7 @@ class Connection
             ]
         ];
 
+
         try {
             $response = $request->request('POST', '/event', [
                 'debug' => $debug,
