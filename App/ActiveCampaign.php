@@ -58,14 +58,15 @@ class ActiveCampaign {
             'email' => $request['email'],
         ];
 
+        if (isset($request['id'])) {
+            $data['id'] = $request['id'];
+        }
+
         if (isset($request['extraData'])) {
             foreach ($request['extraData'] as $key => $value) {
                 $data[$key] = $value;
             }
         }
-
-        var_dump($data);
-
         $this->activeCampaign->exec('contact_sync', $data);
     }
 
