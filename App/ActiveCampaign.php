@@ -67,8 +67,23 @@ class ActiveCampaign {
                 $data[$key] = $value;
             }
         }
-        var_dump($data);
+
         $this->activeCampaign->exec('contact_sync', $data);
+    }
+
+    public function updateEmailContact($request)
+    {
+        if (!isset($request['email'])) die('Email requerido');
+        if (!isset($request['id'])) die('Contact ID requerido');
+
+        $data = [
+            'email' => $request['email'],
+            'id' => $request['id']
+        ];
+
+        var_dump($data);
+
+        $this->activeCampaign->exec('contact_edit', $data);
     }
 
     public function createCustomer()
