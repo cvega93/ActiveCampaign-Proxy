@@ -67,6 +67,7 @@ class ActiveCampaign {
                 $data[$key] = $value;
             }
         }
+        var_dump($data);
         $this->activeCampaign->exec('contact_sync', $data);
     }
 
