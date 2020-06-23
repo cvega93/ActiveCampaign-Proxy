@@ -1,10 +1,12 @@
 <?php
+
 namespace App;
 
 /**
  * @property Connection activeCampaign
  */
-class ActiveCampaign {
+class ActiveCampaign
+{
     public function __construct()
     {
         $this->activeCampaign = new Connection();
@@ -50,6 +52,7 @@ class ActiveCampaign {
         ];
         $this->activeCampaign->execEvent($request['event'], $data);
     }
+
     public function updateClient($request)
     {
         if (!isset($request['email'])) die('Email requerido');

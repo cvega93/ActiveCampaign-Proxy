@@ -9,13 +9,13 @@ use GuzzleHttp\Exception\GuzzleException;
 class Connection
 {
     const CREDENTIALS = [
-        'api_key' => 'f3fcb2063ca2c8bc00a40c26455bc135a992505fc3ffdba2045aff3196aedb50a75752e9'
+        'api_key' => '796bb394c125d6034a3c40cde99213831ccb02e0ac62f6a683b79a2d43ce9ae9e81e780f'
     ];
 
     function __construct()
     {
         $this->activeCampaign = new Client([
-            'base_uri' => 'https://monkeyfit.api-us1.com',
+            'base_uri' => 'https://talently27145.api-us1.com',
             'headers' => [
                 'Content-Type' => 'application/x-www-form-urlencoded',
             ],
@@ -26,23 +26,21 @@ class Connection
 
     }
 
-
-    public function execEvent($event, $data, $debug = false)
+        public function execEvent($event, $data, $debug = false)
     {
         $request = new Client([
             'base_uri' => 'https://trackcmp.net',
         ]);
 
         $data = [
-            "actid" => "223729883",
-            "key" => "6f9de46b2121c8dbfedad8799571c93a12c6cf47",
+            "actid" => "66678482",
+            "key" => "70923d673893b68b5b8aaac0a3b4b9da8f9e0c5f",
             "event" => $event,
             "eventdata" => $data['event_value'],
             "visit" => [
                 "email" => $data['email'],
             ]
         ];
-
 
         try {
             $response = $request->request('POST', '/event', [
