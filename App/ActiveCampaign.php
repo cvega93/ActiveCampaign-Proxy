@@ -107,13 +107,12 @@ class ActiveCampaign
         } else {
             file_put_contents('next_meeting_calendar.txt', 'melissa', FILE_USE_INCLUDE_PATH);
         }
-        chmod('next_meeting_calendar.txt', 0664);
         echo file_get_contents('next_meeting_calendar.txt', true);
     }
 
     public function getNextMeeting()
     {
-        echo file_get_contents('next_meeting_calendar.txt', true);
-
+        header('Content-Type: application/json');
+        echo json_encode(file_get_contents('next_meeting_calendar.txt', true));
     }
 }
