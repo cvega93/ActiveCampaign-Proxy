@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d578c8e3-7041-4f24-9c05-5e0d6ac6190b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ActiveCampaign-Proxy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ActiveCampaign-Proxy.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/next_meeting_calendar.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/ActiveCampaign.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/ActiveCampaign.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Connection.php" afterDir="false" />
@@ -83,7 +83,12 @@
       <workItem from="1556645005639" duration="120000" />
       <workItem from="1560197169712" duration="5830000" />
       <workItem from="1561007137727" duration="34000" />
-      <workItem from="1592858741607" duration="5448000" />
+      <workItem from="1592858741607" duration="13435000" />
+      <workItem from="1593826574440" duration="1161000" />
+      <workItem from="1594085827198" duration="1343000" />
+      <workItem from="1594237020819" duration="646000" />
+      <workItem from="1594833917526" duration="2315000" />
+      <workItem from="1596499861718" duration="4740000" />
     </task>
     <servers />
   </component>

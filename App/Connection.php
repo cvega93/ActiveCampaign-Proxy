@@ -23,7 +23,6 @@ class Connection
                 'exceptions' => false
             ]
         ]);
-
     }
 
         public function execEvent($event, $data, $debug = false)

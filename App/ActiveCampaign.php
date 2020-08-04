@@ -98,4 +98,21 @@ class ActiveCampaign
     {
 
     }
+
+    public function meetingScheuled()
+    {
+        $current_meeting = file_get_contents('next_meeting_calendar.txt', true);
+        if ($current_meeting == 'melissa') {
+            file_put_contents('next_meeting_calendar.txt', 'pedro', FILE_USE_INCLUDE_PATH);
+        } else {
+            file_put_contents('next_meeting_calendar.txt', 'melissa', FILE_USE_INCLUDE_PATH);
+        }
+        echo file_get_contents('next_meeting_calendar.txt', true);
+    }
+
+    public function getNextMeeting()
+    {
+        echo file_get_contents('next_meeting_calendar.txt', true);
+
+    }
 }
