@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d578c8e3-7041-4f24-9c05-5e0d6ac6190b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/App/next_meeting_calendar.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/ActiveCampaign.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/ActiveCampaign.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Connection.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +86,7 @@
       <workItem from="1594085827198" duration="1343000" />
       <workItem from="1594237020819" duration="646000" />
       <workItem from="1594833917526" duration="2315000" />
-      <workItem from="1596499861718" duration="4740000" />
+      <workItem from="1596499861718" duration="5594000" />
     </task>
     <servers />
   </component>
