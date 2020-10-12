@@ -102,10 +102,10 @@ class ActiveCampaign
     public function meetingScheuled()
     {
         $current_meeting = file_get_contents('next_meeting_calendar.txt', true);
-        if ($current_meeting == 'melissa') {
+        if ($current_meeting == 'pablo') {
             file_put_contents('next_meeting_calendar.txt', 'pedro', FILE_USE_INCLUDE_PATH);
         } else {
-            file_put_contents('next_meeting_calendar.txt', 'melissa', FILE_USE_INCLUDE_PATH);
+            file_put_contents('next_meeting_calendar.txt', 'pablo', FILE_USE_INCLUDE_PATH);
         }
         chmod('next_meeting_calendar.txt', '777');
         echo file_get_contents('next_meeting_calendar.txt', true);
