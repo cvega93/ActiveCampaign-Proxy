@@ -135,6 +135,7 @@ class ActiveCampaign
     {
         $pre= file_get_contents('next_meeting_calendar.txt', true);
 //        echo $pre*1;
+        header('Content-Type: application/json');
         echo $this->salemen_force[$pre*1]['salesman'];
 
     }
