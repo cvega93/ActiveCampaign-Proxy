@@ -7,8 +7,24 @@ namespace App;
  */
 class ActiveCampaign
 {
+    /**
+     * @var \string[][]
+     */
+    private $salemen_force;
+
     public function __construct()
     {
+        $this->salemen_force=[
+            [
+                'salesman'=>'melissa'
+            ],
+            [
+                'salesman'=>'pedro'
+            ],
+            [
+                'salesman'=>'pablo'
+            ]
+        ];
         $this->activeCampaign = new Connection();
     }
 
@@ -102,17 +118,24 @@ class ActiveCampaign
     public function meetingScheuled()
     {
         $current_meeting = file_get_contents('next_meeting_calendar.txt', true);
-        if ($current_meeting == 'melissa') {
-            file_put_contents('next_meeting_calendar.txt', 'pedro', FILE_USE_INCLUDE_PATH);
-        } else {
-            file_put_contents('next_meeting_calendar.txt', 'melissa', FILE_USE_INCLUDE_PATH);
+        $pre=$current_meeting*1+1;
+        if ($pre==3){
+            $pre=0;
         }
-        echo file_get_contents('next_meeting_calendar.txt', true);
+        file_put_contents('next_meeting_calendar.txt', $pre, FILE_USE_INCLUDE_PATH);
+//        if ($current_meeting == 'melissa') {
+//            file_put_contents('next_meeting_calendar.txt', 'pedro', FILE_USE_INCLUDE_PATH);
+//        } else {
+//            file_put_contents('next_meeting_calendar.txt', 'melissa', FILE_USE_INCLUDE_PATH);
+//        }
+//        echo file_get_contents('next_meeting_calendar.txt', true);
+        echo $this->salemen_force[$pre*1]['salesman'];
     }
-
     public function getNextMeeting()
     {
-        echo file_get_contents('next_meeting_calendar.txt', true);
+        $pre= file_get_contents('next_meeting_calendar.txt', true);
+//        echo $pre*1;
+        echo $this->salemen_force[$pre*1]['salesman'];
 
     }
 }
