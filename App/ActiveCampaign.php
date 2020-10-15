@@ -131,6 +131,7 @@ class ActiveCampaign
         if ($pre==2){
             $pre=0;
         }
+        chmod('next_meeting_calendar.txt', '777');
         file_put_contents('next_meeting_calendar.txt', $pre, FILE_USE_INCLUDE_PATH);
         echo $this->salesmen_force[$pre*1]['salesman'];
     }
@@ -148,6 +149,7 @@ class ActiveCampaign
         if ($pre==2){
             $pre=0;
         }
+        chmod('new_next_meeting_calendar.txt', '777');
         file_put_contents('new_next_meeting_calendar.txt', $pre, FILE_USE_INCLUDE_PATH);
         echo $this->new_salesmen_force[$pre*1]['salesman'];
     }
