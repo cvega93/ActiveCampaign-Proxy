@@ -138,7 +138,7 @@ class ActiveCampaign
     {
         $pre= file_get_contents('next_meeting_calendar.txt', true);
         header('Content-Type: application/json');
-        echo $this->salesmen_force[$pre*1]['salesman'];
+        echo json_encode($this->salesmen_force[$pre*1]['salesman']);
 
     }
     public function newMeetingScheuled()
@@ -155,7 +155,7 @@ class ActiveCampaign
     {
         $pre= file_get_contents('new_next_meeting_calendar.txt', true);
         header('Content-Type: application/json');
-        echo $this->new_salesmen_force[$pre*1]['salesman'];
+        echo json_encode($this->new_salesmen_force[$pre*1]['salesman']);
 
     }
 }
