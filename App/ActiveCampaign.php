@@ -145,10 +145,11 @@ class ActiveCampaign
     public function newMeetingScheuled()
     {
         $current_meeting = file_get_contents('new_next_meeting_calendar.txt', true);
-        $pre=$current_meeting*1+1;
-        if ($pre==2){
-            $pre=0;
-        }
+        $pre=0;
+//        $pre=$current_meeting*1+1;
+//        if ($pre==2){
+//            $pre=0;
+//        }
         chmod('new_next_meeting_calendar.txt', '777');
         file_put_contents('new_next_meeting_calendar.txt', $pre, FILE_USE_INCLUDE_PATH);
         echo $this->new_salesmen_force[$pre*1]['salesman'];
@@ -157,7 +158,8 @@ class ActiveCampaign
     {
         $pre= file_get_contents('new_next_meeting_calendar.txt', true);
         header('Content-Type: application/json');
-        echo json_encode($this->new_salesmen_force[$pre*1]['salesman']);
+//        echo json_encode($this->new_salesmen_force[$pre*1]['salesman']);
+        echo json_encode($this->new_salesmen_force[0]['salesman']);
 
     }
 }
