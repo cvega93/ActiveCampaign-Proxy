@@ -148,7 +148,7 @@ class ActiveCampaign
         if ($pre==2){
             $pre=0;
         }
-        file_put_contents('new_new_next_meeting_calendar.txt', $pre, FILE_USE_INCLUDE_PATH);
+        file_put_contents('new_next_meeting_calendar.txt', $pre, FILE_USE_INCLUDE_PATH);
         echo $this->new_salesmen_force[$pre*1]['salesman'];
     }
     public function newGetNextMeeting()
