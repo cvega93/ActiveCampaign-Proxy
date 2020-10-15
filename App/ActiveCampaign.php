@@ -31,7 +31,7 @@ class ActiveCampaign
                 'salesman'=>'pablo'
             ],
             [
-                'salesman'=>'tbd'
+                'salesman'=>'victor'
             ]
         ];
         $this->activeCampaign = new Connection();
