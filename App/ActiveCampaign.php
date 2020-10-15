@@ -10,19 +10,28 @@ class ActiveCampaign
     /**
      * @var \string[][]
      */
-    private $salemen_force;
+    private $salesmen_force;
+    /**
+     * @var \string[][]
+     */
+    private $new_salesmen_force;
 
     public function __construct()
     {
-        $this->salemen_force=[
+        $this->salesmen_force=[
             [
                 'salesman'=>'melissa'
             ],
             [
                 'salesman'=>'pedro'
-            ],
+            ]
+        ];
+        $this->new_salesmen_force=[
             [
                 'salesman'=>'pablo'
+            ],
+            [
+                'salesman'=>'tbd'
             ]
         ];
         $this->activeCampaign = new Connection();
@@ -119,23 +128,32 @@ class ActiveCampaign
     {
         $current_meeting = file_get_contents('next_meeting_calendar.txt', true);
         $pre=$current_meeting*1+1;
-        if ($pre==3){
+        if ($pre==2){
             $pre=0;
         }
         file_put_contents('next_meeting_calendar.txt', $pre, FILE_USE_INCLUDE_PATH);
-//        if ($current_meeting == 'melissa') {
-//            file_put_contents('next_meeting_calendar.txt', 'pedro', FILE_USE_INCLUDE_PATH);
-//        } else {
-//            file_put_contents('next_meeting_calendar.txt', 'melissa', FILE_USE_INCLUDE_PATH);
-//        }
-//        echo file_get_contents('next_meeting_calendar.txt', true);
-        echo $this->salemen_force[$pre*1]['salesman'];
+        echo $this->salesmen_force[$pre*1]['salesman'];
     }
     public function getNextMeeting()
     {
         $pre= file_get_contents('next_meeting_calendar.txt', true);
-//        echo $pre*1;
-        echo $this->salemen_force[$pre*1]['salesman'];
+        echo $this->salesmen_force[$pre*1]['salesman'];
+
+    }
+    public function newMeetingScheuled()
+    {
+        $current_meeting = file_get_contents('new_next_meeting_calendar.txt', true);
+        $pre=$current_meeting*1+1;
+        if ($pre==2){
+            $pre=0;
+        }
+        file_put_contents('new_new_next_meeting_calendar.txt', $pre, FILE_USE_INCLUDE_PATH);
+        echo $this->new_salesmen_force[$pre*1]['salesman'];
+    }
+    public function newGetNextMeeting()
+    {
+        $pre= file_get_contents('new_next_meeting_calendar.txt', true);
+        echo $this->new_salesmen_force[$pre*1]['salesman'];
 
     }
 }
