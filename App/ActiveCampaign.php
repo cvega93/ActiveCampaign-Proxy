@@ -131,7 +131,7 @@ class ActiveCampaign
     {
         $current_meeting = file_get_contents('next_meeting_calendar.txt', true);
         $pre=$current_meeting*1+1;
-        if ($pre==2){
+        if ($pre==3){
             $pre=0;
         }
         chmod('next_meeting_calendar.txt', '777');
