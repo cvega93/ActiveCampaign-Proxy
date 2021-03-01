@@ -20,7 +20,7 @@ class ActiveCampaign
     {
         $this->salesmen_force=[
             [
-                'salesman'=>'melissa'
+                'salesman'=>'victoria'
             ],
             [
                 'salesman'=>'pedro'
