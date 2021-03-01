@@ -83,7 +83,6 @@ class ActiveCampaign
         ];
         $this->activeCampaign->execEvent($request['event'], $data);
     }
-
     public function updateClient($request)
     {
         if (!isset($request['email'])) die('Email requerido');
@@ -104,7 +103,6 @@ class ActiveCampaign
 
         $this->activeCampaign->exec('contact_sync', $data);
     }
-
     public function updateEmailContact($request)
     {
         if (!isset($request['email'])) die('Email requerido');
@@ -119,17 +117,6 @@ class ActiveCampaign
 
         $this->activeCampaign->exec('contact_edit', $data);
     }
-
-    public function createCustomer()
-    {
-
-    }
-
-    public function generateOrder()
-    {
-
-    }
-
     public function meetingScheuled()
     {
         $current_meeting = file_get_contents('next_meeting_calendar.txt', true);
@@ -166,5 +153,16 @@ class ActiveCampaign
         header('Content-Type: application/json');
         echo json_encode($this->new_salesmen_force[$pre*1]['salesman']);
 //        echo json_encode($this->new_salesmen_force[0]['salesman']);
+    }
+
+    public function createReferral()
+    {
+        $email = $_POST['contact']['fields']['referidos'];
+        $tags = 'referral';
+        $data['email'] = $email;
+        $data['tags'] = $tags;
+        $data['p[25]'] = 25;
+        var_dump($_POST);
+        $this->activeCampaign->exec('contact_add', $data, true);
     }
 }
